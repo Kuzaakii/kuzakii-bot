@@ -33,17 +33,16 @@ client.on('message', message => {
       image: {
         url:avatar,
 }}})}
- if (message.content.startsWith("¤serverinfo")){
+ if (message.content.startsWith(prefix + ''serverinfo'')){
     var embed1 = new Discord.RichEmbed()
-    .setTitle("ServerInformaion")
-    .addField("Server Name", message.guild.name)
-    .addField("users", client.users.size)
-    .addField("channels", client.channels.size)
+    .setTitle("Information du Serveur")
+    .addField("Nom du Serveur", message.guild.name)
+    .addField("Salon", client.channels.size)
     .addField("region", message.guild.region)
     .addField("creation at", message.guild.createdAt)
-    .addField("Owner Of Server", message.guild.owner)
+    .addField("Créateur", message.guild.owner)
     .addField("Roles", message.guild.roles.size)
-    .addField("users", client.users.size)
+    .addField("Utilisateurs", client.users.size)
     .setFooter("This Will Updated from time to other")
     .setThumbnail(message.guild.iconURL)
     message.channel.send(embed1);
