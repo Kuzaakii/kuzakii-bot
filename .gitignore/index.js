@@ -43,7 +43,7 @@ client.on('message', message => {
     .addField("Créateur", message.guild.owner)
     .addField("Roles", message.guild.roles.size)
     .addField("Utilisateurs", client.users.size)
-    .setFooter("This Will Updated from time to other")
+    .setFooter("Kυzαkıı-вσт © •")
     .setThumbnail(message.guild.iconURL)
     message.channel.send(embed1);
   }
