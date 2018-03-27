@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "¤"
+const prefix = "÷"
 
 client.on('ready', () => {
-	client.user.setGame('¤help - kuzakiibot.com');
+	client.user.setGame('÷help - kuzakiibot.com');
   console.log('Je suis prêt !');
 });
 
