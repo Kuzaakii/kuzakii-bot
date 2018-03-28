@@ -54,15 +54,15 @@ if ( message.content === (prefix + "help")){
     description: `prefix : ${prefix}`,
     fields: [{
       name: "Utilitaire:",
-      value: `${prefix}avatar - Permet de voir votre avatar ou celui d'un utilisateur mentionné.\n${prefix}invite - Rejoindre mon serveur.\n${prefix}help - Affiche la liste de commandes.\n*help - Permet d'utiliser le bot musique. \n${prefix}serverinfo - Donnes des informations sur le serveur.`  ,
+      value: `${prefix}avatar - Permet de voir votre avatar ou celui d'un utilisateur mentionné.\n${prefix}support - Rejoindre le serveur pour avoir de l'aide.\n${prefix}help - Affiche la liste de commandes.\n*help - Permet d'utiliser le bot musique. \n${prefix}serverinfo - Donnes des informations sur le serveur.`  ,
 	  
     },{
       name: "Fun(OFF):",
       value: `${prefix}chien - Envoie des images aléatoires de chiens.\n${prefix}chat - Envoie des images aléatoires de chats`,
 }]}})} 
-    if(message.content === (prefix + 'invite')){
+    if(message.content === (prefix + 'support')){
 		var InvitePerm = ['ADMINISTRATOR', 'MANAGE_ROLES', 'KICK_MEMBERS', 'BAN_MEMBERS', 'MANAGE_MESSAGES'];
-		client.generateInvite(InvitePerm)
+		client.guilds.get("418518151861370890").channels.get("418564457795551236").createInvite()
 		  .then(link => {
 			  message.channel.send({
 				  embed: {
