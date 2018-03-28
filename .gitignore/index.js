@@ -57,7 +57,7 @@ if ( message.content === (prefix + "help")){
       value: `${prefix}avatar - Permet de voir votre avatar ou celui d'un utilisateur mentionné.\n${prefix}invite - Rejoindre mon serveur.\n${prefix}help - Affiche la liste de commandes.\n*help - Permet d'utiliser le bot musique. \n${prefix}serverinfo - Donnes des informations sur le serveur.`  ,
 	  
     },{
-      name: "Fun:",
+      name: "Fun(OFF):",
       value: `${prefix}chien - Envoie des images aléatoires de chiens.\n${prefix}chat - Envoie des images aléatoires de chats`,
 }]}})} 
     if(message.content === (prefix + 'invite')){
