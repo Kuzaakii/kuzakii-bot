@@ -105,17 +105,17 @@ client.on('message', message => {
         url:avatar,
 }}})}
  if (message.content.startsWith(prefix + "serverinfo")){
-    var embed1 = new Discord.RichEmbed()
-    .setTitle("ServerInformaion")
-    .addField("Server Name", message.guild.name)
+     var embed1 = new Discord.RichEmbed()
+    .setTitle("Information du Serveur")
+    .addField("Nom du Serveur", message.guild.name)
+    .addField("Utilisateur", client.users.size)
+    .addField("Salon", client.channels.size)
+    .addField("Région", message.guild.region)
+    .addField("Crée le", message.guild.createdAt)
+    .addField("Créateur du Serveur", message.guild.owner)
+    .addField("Rôles", message.guild.roles.size)
     .addField("users", client.users.size)
-    .addField("channels", client.channels.size)
-    .addField("region", message.guild.region)
-    .addField("creation at", message.guild.createdAt)
-    .addField("Owner Of Server", message.guild.owner)
-    .addField("Roles", message.guild.roles.size)
-    .addField("users", client.users.size)
-    .setFooter("This Will Updated from time to other")
+    .setFooter("Kυzαkıı-вσт ©️ 2018")
     .setThumbnail(message.guild.iconURL)
     message.channel.send(embed1);
   }
