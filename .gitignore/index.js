@@ -83,7 +83,7 @@ client.on('messageReactionRemove', (messageReaction, user) => {
 
 // Ready 
 client.on('ready', () => {
-	client.user.setGame('+help - kuzakiibot.com');
+	client.user.setGame('prefix + help - kuzakiibot.com');
   console.log('Je suis prêt !');
 });
 
@@ -104,7 +104,7 @@ client.on('message', message => {
       image: {
         url:avatar,
 }}})}
- if (message.content.startsWith("¤serverinfo")){
+ if (message.content.startsWith(prefix + "serverinfo")){
     var embed1 = new Discord.RichEmbed()
     .setTitle("ServerInformaion")
     .addField("Server Name", message.guild.name)
