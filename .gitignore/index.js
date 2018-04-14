@@ -108,13 +108,12 @@ client.on('message', message => {
      var embed1 = new Discord.RichEmbed()
     .setTitle("Information du Serveur")
     .addField("Nom du Serveur", message.guild.name)
-    .addField("Utilisateur", client.users.size)
+    .addField("Utilisateur", message.guild.members.size)
     .addField("Salon", client.channels.size)
     .addField("Région", message.guild.region)
     .addField("Crée le", message.guild.createdAt)
     .addField("Créateur du Serveur", message.guild.owner)
-    .addField("Rôles", message.guild.roles.size)
-    .addField("users", client.users.size)
+    .addField("Rôles", message.guild.roles.size
     .setFooter("Kυzαkıı-вσт ©️ 2018")
     .setThumbnail(message.guild.iconURL)
     message.channel.send(embed1);
