@@ -83,7 +83,7 @@ client.on('messageReactionRemove', (messageReaction, user) => {
 
 // Ready 
 client.on('ready', () => {
-	client.user.setGame('prefix + help - kuzakiibot.com');
+	client.user.setPresence({game: {name: `${prefix}help - kuzakiibot.xyz | Joue à ${client.guilds.size} serveurs`, type: 2}})
   console.log('Je suis prêt !');
 });
 
@@ -105,7 +105,7 @@ client.on('message', message => {
         url:avatar,
 }}})}
  if (message.content.startsWith(prefix + "serverinfo")){
-     var embed1 = new Discord.RichEmbed()
+    var embed1 = new Discord.RichEmbed()
     .setTitle("Information du Serveur")
     .addField("Nom du Serveur", message.guild.name)
     .addField("Utilisateur", message.guild.members.size)
@@ -113,7 +113,7 @@ client.on('message', message => {
     .addField("Région", message.guild.region)
     .addField("Crée le", message.guild.createdAt)
     .addField("Créateur du Serveur", message.guild.owner)
-    .addField("Rôles", message.guild.roles.size
+    .addField("Rôles", message.guild.roles.size)
     .setFooter("Kυzαkıı-вσт ©️ 2018")
     .setThumbnail(message.guild.iconURL)
     message.channel.send(embed1);
@@ -164,4 +164,4 @@ if(message.content === prefix + "chien" ){
     }}})};
     });
 
-client.login(process.env.TOKEN);
+client.login("NDI2NDU3MzAzODY5NTU0Njk4.DbN7DA.wTBJFWT1cmBBRHO-4BM8VMyYivQ");
