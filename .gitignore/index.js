@@ -37,12 +37,12 @@ client.on('messageReactionRemove', (messageReaction, user) => {
 });
 // Team Galaxie 
 client.on('messageReactionAdd', (messageReaction, user) => {
-  if (messageReaction.emoji.id == "434697176027758593") {
+  if (messageReaction.emoji.id == "435463189770010644") {
     messageReaction.message.guild.members.get(user.id).addRole("420634390234660868");
   }
 });
 client.on('messageReactionRemove', (messageReaction, user) => {
-  if (messageReaction.emoji.id == "434697176027758593") {
+  if (messageReaction.emoji.id == "435463189770010644") {
     messageReaction.message.guild.members.get(user.id).removeRole("420634390234660868");
   }
 });
@@ -77,6 +77,17 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 client.on('messageReactionRemove', (messageReaction, user) => {
   if (messageReaction.emoji.id == "434697844910194689") {
     messageReaction.message.guild.members.get(user.id).removeRole("434694666835722240");
+  }
+});
+// Fondation Aether
+client.on('messageReactionAdd', (messageReaction, user) => {
+  if (messageReaction.emoji.id == "435461435666202626") {
+    messageReaction.message.guild.members.get(user.id).addRole("435461651592904715");
+  }
+});
+client.on('messageReactionRemove', (messageReaction, user) => {
+  if (messageReaction.emoji.id == "435461435666202626") {
+    messageReaction.message.guild.members.get(user.id).removeRole("435461651592904715");
   }
 });
 
@@ -164,4 +175,4 @@ if(message.content === prefix + "chien" ){
     }}})};
     });
 
-client.login("NDI2NDU3MzAzODY5NTU0Njk4.DbN7DA.wTBJFWT1cmBBRHO-4BM8VMyYivQ");
+client.login(process.env.TOKEN);
