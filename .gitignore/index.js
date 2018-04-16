@@ -15,12 +15,12 @@ client.on('messageReactionRemove', (messageReaction, user) => {
 });
 // Team Rocket
 client.on('messageReactionAdd', (messageReaction, user) => {
-  if (messageReaction.emoji.id == "434696132422008843") {
+  if (messageReaction.emoji.id == "435457840086384650") {
     messageReaction.message.guild.members.get(user.id).addRole("434689676519931904");
   }
 });
 client.on('messageReactionRemove', (messageReaction, user) => {
-  if (messageReaction.emoji.id == "434696132422008843") {
+  if (messageReaction.emoji.id == "435457840086384650") {
     messageReaction.message.guild.members.get(user.id).removeRole("434689676519931904");
   }
 });
