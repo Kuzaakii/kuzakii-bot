@@ -115,7 +115,7 @@ client.on('message', message => {
       image: {
         url:avatar,
 }}})}
-if (message.channel.type === (prefix + "serverinfo")){
+if(message.content.startsWith(prefix + "serverinfo")){
     var embed1 = new Discord.RichEmbed()
     .setTitle("Information du Serveur")
     .addField("Nom du Serveur", message.guild.name)
@@ -175,4 +175,4 @@ if(message.content === prefix + "chien" ){
     }}})};
     });
 
-client.login(process.env.TOKEN);
+client.login(process.ENV.TOKEN);
