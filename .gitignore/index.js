@@ -115,7 +115,7 @@ client.on('message', message => {
       image: {
         url:avatar,
 }}})}
- if (message.content.startsWith(prefix + "serverinfo")){
+if (message.channel.type === (prefix + "serverinfo")){
     var embed1 = new Discord.RichEmbed()
     .setTitle("Information du Serveur")
     .addField("Nom du Serveur", message.guild.name)
@@ -133,7 +133,7 @@ client.on('message', message => {
                     message.delete(message.author)
                     message.channel.send(message.content.substr(prefix.length+4))
             }
-if ( message.content === (prefix + "help")){
+if (message.content === (prefix + "help")){
     message.channel.send("", {embed: {
     color: 0xFF7777,
     title: "Commande:",
