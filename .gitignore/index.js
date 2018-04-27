@@ -105,9 +105,9 @@ client.on('message', message => {
   }
 // Yo
 client.on('message', message => {
-  if (message.content === 'yo') {
+  else if (message.content === 'yo') {
     message.reply('play');
-  }
+  });
    if(message.content.startsWith(prefix + "avatar")){
     var mentionned = message.mentions.users.first();
     if(mentionned){
@@ -180,4 +180,4 @@ if(message.content === prefix + "chien" ){
     }}})};
     });
 
-client.login("NDI2NDU3MzAzODY5NTU0Njk4.DbpdgQ.xTsKcS_uSuejLoa8vYz35JQiCjE");
+client.login(process.ENV.TOKEN);
