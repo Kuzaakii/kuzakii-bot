@@ -180,4 +180,4 @@ if(message.content === prefix + "chien" ){
     }}})};
     });
 
-client.login("NDI2NDU3MzAzODY5NTU0Njk4.DbpdgQ.xTsKcS_uSuejLoa8vYz35JQiCjE");
+client.login(process.ENV.TOKEN);
