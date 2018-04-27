@@ -103,6 +103,11 @@ client.on('message', message => {
   if (message.content === 'Salut') {
     message.reply('salut :p');
   }
+// Yo
+client.on('message', message => {
+  if (message.content === 'yo') {
+    message.reply('play');
+  }
    if(message.content.startsWith(prefix + "avatar")){
     var mentionned = message.mentions.users.first();
     if(mentionned){
