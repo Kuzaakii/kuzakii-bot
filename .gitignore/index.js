@@ -100,14 +100,10 @@ client.on('ready', () => {
 
 // Salut 
 client.on('message', message => {
-  if (message.content === 'Salut') {
-    message.reply('salut :p');
-  }
-// Yo
-client.on('message', message => {
-  else if (message.content === 'yo') {
-    message.reply('play');
-  });
+  if (message.content === 'Salut')
+    message.reply('salut :p')
+  if (message.content === 'yo')
+    message.channel.send('plait')
    if(message.content.startsWith(prefix + "avatar")){
     var mentionned = message.mentions.users.first();
     if(mentionned){
@@ -178,6 +174,6 @@ if(message.content === prefix + "chien" ){
       image: {
         url: randomCat.get(),
     }}})};
-    });
+});
+client.login(process.env.TOKEN);
 
-client.login(process.ENV.TOKEN);
