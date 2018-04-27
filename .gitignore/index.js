@@ -104,6 +104,14 @@ client.on('message', message => {
     message.reply('salut :p')
   if (message.content === 'yo')
     message.channel.send('plait')
+    if (message.content === 'quoi')
+    message.channel.send('feur')
+    if (message.content === 'hein')
+    message.channel.send('deux')
+    if (message.content === 'trois')
+    message.channel.send('qua...Continue sans moi connard')
+    if (message.content === 'Chut')
+    message.channel.send("d'eau")
    if(message.content.startsWith(prefix + "avatar")){
     var mentionned = message.mentions.users.first();
     if(mentionned){
